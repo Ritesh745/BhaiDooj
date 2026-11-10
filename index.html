@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16090e">
+  <title>A Little Surprise | Happy Bhai Dooj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background effects -->
+  <div class="ambient-glow"></div>
+  <div class="grain"></div>
+  <canvas id="particleCanvas"></canvas>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="topbar">
+    <div class="brand">A LITTLE SURPRISE <span>✦</span></div>
+    <button class="sound-button" id="soundToggle" aria-label="Toggle sound">
+      <span id="soundIcon">♫</span>
+    </button>
+  </header>
+
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- SCENE 1: INTRO -->
+  <main>
+
+    <section class="scene active" id="scene1">
+      <div class="intro-content">
+        <div class="eyebrow reveal">A SPECIAL DAY · A SPECIAL BOND</div>
+
+        <div class="hero-diya" id="heroDiya">
+          <div class="halo"></div>
+          <div class="flame">
+            <div class="flame-inner"></div>
+          </div>
+          <div class="wick"></div>
+          <div class="diya-bowl">
+            <div class="diya-highlight"></div>
+          </div>
+          <div class="diya-shadow"></div>
+        </div>
+
+        <h1 class="hero-title">
+          Some bonds<br>
+          <span>are forever.</span>
+        </h1>
+
+        <p class="hero-description">
+          A little celebration, a little love,<br>
+          and a surprise made just for you.
+        </p>
+
+        <button class="primary-btn" id="startButton">
+          <span>LET'S BEGIN</span>
+          <span class="btn-arrow">↗</span>
+        </button>
+
+        <div class="bottom-note">MADE WITH LOVE, FROM YOUR BROTHER</div>
+      </div>
+
+      <div class="corner-decoration top-left">✧</div>
+      <div class="corner-decoration bottom-right">✧</div>
+    </section>
+
+    <!-- SCENE 2: FESTIVAL -->
+    <section class="scene" id="scene2">
+      <div class="scene-content">
+        <div class="eyebrow">THE FESTIVAL OF LOVE</div>
+
+        <h2 class="section-heading">
+          A little light,<br>
+          <span>a lot of love.</span>
+        </h2>
+
+        <p class="section-description">
+          Every festival has its own magic.<br>
+          This one celebrates a bond that is irreplaceable.
+        </p>
+
+        <div class="ritual-area">
+          <div class="rangoli" id="rangoli">
+            <div class="rangoli-ring ring-one"></div>
+            <div class="rangoli-ring ring-two"></div>
+            <div class="rangoli-ring ring-three"></div>
+            <div class="rangoli-center">✦</div>
+            <div class="rangoli-dots"></div>
+          </div>
+
+          <div class="mini-diya mini-one">
+            <div class="mini-flame"></div>
+            <div class="mini-bowl"></div>
+          </div>
+          <div class="mini-diya mini-two">
+            <div class="mini-flame"></div>
+            <div class="mini-bowl"></div>
+          </div>
+        </div>
+
+        <p class="ritual-instruction">TAP THE RANGOLI TO MAKE A WISH</p>
+
+        <button class="primary-btn" id="ritualButton">
+          CONTINUE THE SURPRISE <span class="btn-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 3: THALI -->
+    <section class="scene" id="scene3">
+      <div class="scene-content">
+        <div class="eyebrow">A LITTLE TRADITION</div>
+        <h2 class="section-heading">A moment of <span>blessings.</span></h2>
+        <p class="section-description">
+          Some traditions are beautiful because of the love behind them.
+        </p>
+
+        <div class="thali-wrap" id="thali">
+          <div class="thali-plate">
+            <div class="plate-border"></div>
+            <div class="plate-inner"></div>
+
+            <div class="kumkum">
+              <span></span>
+            </div>
+
+            <div class="rice-bowl">✧</div>
+
+            <div class="sweet sweet-one"></div>
+            <div class="sweet sweet-two"></div>
+
+            <div class="flower-decoration">✿</div>
+
+            <div class="thali-diya">
+              <div class="thali-flame"></div>
+              <div class="thali-bowl"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tilak-message" id="tilakMessage">
+          A little tilak, a little rice,<br>
+          and endless wishes for your happiness.
+        </div>
+
+        <button class="primary-btn" id="tilakButton">
+          SEND YOUR BLESSINGS <span class="btn-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 4: GIFT -->
+    <section class="scene" id="scene4">
+      <div class="scene-content">
+        <div class="eyebrow">SOMETHING JUST FOR YOU</div>
+
+        <h2 class="section-heading">
+          A little <span>surprise.</span>
+        </h2>
+
+        <p class="section-description">
+          I couldn't wrap the whole world,<br>
+          so I wrapped a little something instead.
+        </p>
+
+        <div class="gift-stage">
+          <div class="gift-glow"></div>
+
+          <div class="gift-box" id="giftBox">
+            <div class="gift-lid">
+              <div class="ribbon ribbon-lid"></div>
+              <div class="gift-bow">
+                <span></span><span></span>
+              </div>
+            </div>
+            <div class="gift-body">
+              <div class="ribbon ribbon-body"></div>
+              <div class="gift-front-shine"></div>
+            </div>
+          </div>
+
+          <div class="gift-shadow"></div>
+        </div>
+
+        <p class="gift-instruction" id="giftInstruction">
+          TAP THE GIFT TO OPEN IT
+        </p>
+
+        <button class="primary-btn" id="giftButton">
+          OPEN YOUR GIFT <span class="btn-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 5: SIBLING HUMOUR -->
+    <section class="scene" id="scene5">
+      <div class="scene-content">
+        <div class="eyebrow">A SMALL CONFESSION</div>
+        <h2 class="section-heading">
+          Things I tolerate<br>
+          <span>because you're my sister.</span>
+        </h2>
+
+        <div class="roast-card" id="roastCard">
+          <div class="roast-number" id="roastNumber">01 / 05</div>
+          <div class="roast-emoji" id="roastEmoji">🙄</div>
+          <h3 id="roastText">Your unnecessary arguments.</h3>
+          <p id="roastSubtext">You somehow always have a point.</p>
+          <div class="roast-footer">WITH LOVE, OBVIOUSLY.</div>
+        </div>
+
+        <button class="primary-btn" id="roastButton">
+          REVEAL NEXT <span class="btn-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 6: LOVE LETTER -->
+    <section class="scene" id="scene6">
+      <div class="scene-content">
+        <div class="eyebrow">SOME THINGS DESERVE TO BE SAID</div>
+        <h2 class="section-heading">A letter <span>for you.</span></h2>
+
+        <div class="envelope-area" id="envelopeArea">
+          <div class="letter-envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="letter-paper">
+              <div class="letter-content">
+                <div class="letter-date">A NOTE FROM YOUR BROTHER</div>
+                <h3>Dear Choti,</h3>
+                <p id="letterText"></p>
+                <div class="letter-sign">Your annoying Bhai ❤️</div>
+              </div>
+            </div>
+            <div class="envelope-flap"></div>
+            <div class="wax-seal">✦</div>
+          </div>
+        </div>
+
+        <p class="letter-instruction" id="letterInstruction">
+          TAP THE ENVELOPE TO READ
+        </p>
+
+        <button class="primary-btn" id="letterButton">
+          OPEN MY LETTER <span class="btn-arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 7: FINALE -->
+    <section class="scene" id="scene7">
+      <div class="final-content">
+        <div class="final-eyebrow">WITH ALL MY HEART</div>
+
+        <div class="final-diya">
+          <div class="final-flame"></div>
+          <div class="final-bowl"></div>
+        </div>
+
+        <div class="final-particles">✦ ✧ · ✦ · ✧</div>
+
+        <h1 class="final-title">
+          Happy<br>
+          <span>Bhai Dooj</span>
+        </h1>
+
+        <div class="final-divider"><span>✦</span></div>
+
+        <p class="final-message">
+          Keep smiling. Keep shining.<br>
+          Keep being your wonderful self.
+        </p>
+
+        <h2 class="sister-name" id="sisterName">To my favourite sister ❤️</h2>
+
+        <p class="final-small">
+          No matter how much we fight,<br>
+          you'll always have me by your side.
+        </p>
+
+        <div class="signature">Your Bhai ♡</div>
+
+        <button class="replay-btn" id="replayButton">
+          ↻ &nbsp; EXPERIENCE AGAIN
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="scene-counter" id="sceneCounter">01 — 07</div>
+
+  <div class="touch-message" id="touchMessage"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
